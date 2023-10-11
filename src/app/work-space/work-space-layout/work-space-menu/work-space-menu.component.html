@@ -1,0 +1,44 @@
+<br> <br>
+
+<mat-list>
+  <mat-list-item >
+    <mat-icon mat-list-icon>video_library</mat-icon>
+    <div mat-line>
+      <a [routerLink]="'/work-space'">  All Collections  </a>
+    </div>
+  </mat-list-item>
+    <br>
+  <mat-divider></mat-divider>
+  <br>
+    <mat-list-item>
+    <mat-icon mat-list-icon>movie</mat-icon>
+    <div mat-line>
+      <a [routerLink]="'/work-space/content/news'"> News </a>
+    </div>
+  </mat-list-item>
+  <br>
+  <mat-divider></mat-divider>
+  <br>
+  <mat-list-item *ngIf="isAdmin()">
+    <mat-icon mat-list-icon>supervised_user_circle</mat-icon>
+    <div mat-line>
+      <a [routerLink]="'/work-space/admin/users'"> Users </a>
+    </div>
+  </mat-list-item>
+  <br *ngIf="isAdmin()">
+  <mat-divider *ngIf="isAdmin()"></mat-divider>
+  <br>
+  <mat-list-item>
+    <mat-icon mat-list-icon>import_contacts</mat-icon>
+    <div mat-line>
+      <a [routerLink]="'/work-space/collection'"> My Collection </a>
+    </div>
+  </mat-list-item>
+  <br>
+  <mat-divider></mat-divider>
+  <br>
+  <mat-list-item>
+    <mat-icon mat-list-icon>logout</mat-icon>
+    <div mat-line><a (click)="logout()"> logout </a></div>
+  </mat-list-item>
+</mat-list>

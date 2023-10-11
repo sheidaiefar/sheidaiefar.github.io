@@ -1,0 +1,15 @@
+.menu-button{
+    position: absolute;
+    left: 15px;
+}
+
+
+.home-button{
+    position: absolute;
+    right: 55px;
+}
+
+.logout-button{
+    position: absolute;
+    right: 15px;
+}
